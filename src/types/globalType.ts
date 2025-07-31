@@ -36,7 +36,7 @@ export type TQueryParams = {
     category: string;
     price: number;
     discountPercentage?: number;
-    images: string[];
+    image: string[];
 }
 
 export type TUser ={

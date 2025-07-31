@@ -4,6 +4,6 @@ export interface IProduct {
     category: string;
     price: number;
     discountPercentage?: number;
-    images: string[];
+    image: string;
   }
   
