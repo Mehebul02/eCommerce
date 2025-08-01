@@ -4,6 +4,8 @@ import "./globals.css";
 import ReduxProvider from "@/redux/ReduxProvider";
 import MainHeader from "@/shared/header/Header";
 import { Space_Grotesk } from "next/font/google";
+import Footer from "@/shared/Footer";
+import { Toaster } from "sonner";
 const grotesque = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "700"], // adjust as needed
@@ -26,6 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ReduxProvider>
           <MainHeader />
           {children}
+                <Toaster position="top-center" />
+
+         < Footer/>
         </ReduxProvider>
       </body>
     </html>

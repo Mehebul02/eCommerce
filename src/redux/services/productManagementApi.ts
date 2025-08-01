@@ -28,19 +28,12 @@ const productManagementApi = baseApi.injectEndpoints({
             }
         }),
 
-        getCategoryProduct: builder.query({
-            query: () => {
+       
+        createCheckout: builder.mutation({
+            query: (data) => {
                 return {
-                    url: "/products/categories",
-                    method: "GET"
-                }
-            }
-        }),
-        updateProduct: builder.mutation({
-            query: ({id,data}) => {
-                return {
-                    url: `/products/${id}`,
-                    method: "PATCH",
+                    url: "/checkout",
+                    method: "POST",
                     body:data
 
                 }
@@ -52,6 +45,6 @@ const productManagementApi = baseApi.injectEndpoints({
 
 export const { useGetAllProductQuery, 
     useGetSingleProductQuery, 
-    useGetCategoryProductQuery,
-    useUpdateProductMutation
+    useCreateCheckoutMutation
+
 } = productManagementApi

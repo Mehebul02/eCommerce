@@ -1,19 +1,25 @@
 'use client'
 import { MdStar } from "react-icons/md";
-import { FaRegEye } from "react-icons/fa";
-
-
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useParams } from "next/navigation";
 import { useGetSingleProductQuery } from "@/redux/services/productManagementApi";
 import Container from "@/shared/Container";
-import Link from "next/link";
+
 import Image from "next/image";
+import { useAppDispatch, } from "@/redux/hooks/hooks";
+import { addToCart } from "@/redux/feature/cartSlice";
+import { toast } from "sonner";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const { data: product, isLoading } = useGetSingleProductQuery(id);
+const dispatch = useAppDispatch();
+ 
 
+  const handleAdd = () => {
+    dispatch(addToCart({ id: product?.id,image: product?.image, name: product?.title, price: product?.price, quantity: 1 }));
+    toast.success("Product added to cart");
+  };
  if(isLoading){
         return <div className="flex justify-center items-center  h-screen">
             <AiOutlineLoading3Quarters className="animate-spin text-7xl"/>
@@ -83,7 +89,7 @@ const ProductDetails = () => {
 
           {/* Add to Cart Button */}
           <div className="mt-6 space-x-10">
-          <button className="bg-[#F45E2D] cursor-pointer text-white py-3 px-8 rounded-full text-sm uppercase font-semibold hover:bg-sky-700 transition">
+          <button onClick={handleAdd} className="bg-[#F45E2D] cursor-pointer text-white py-3 px-8 rounded-full text-sm uppercase font-semibold hover:bg-sky-700 transition">
               Add to Cart
             </button>
          
