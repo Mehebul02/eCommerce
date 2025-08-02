@@ -7,6 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 import Container from '../../shared/Container';
 import { banner } from '@/assets';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Banner = () => {
@@ -33,11 +34,13 @@ const Banner = () => {
                                     Exclusive offer
                                     <span className="text-yellow-500 mx-1">-30%</span> off this week
                                 </p>
-                                <button className="flex items-center justify-center md:justify-start gap-2 pl-3 bg-white text-black rounded-md 
+                                <Link href="/products">
+                                <button className="flex cursor-pointer items-center justify-center md:justify-start gap-2 pl-3 bg-white text-black rounded-md 
                                     w-full md:w-32 text-sm font-semibold hover:bg-transparent hover:text-white py-3 
                                     border border-transparent hover:border-white/40 duration-200">
                                     Shop Now <GoArrowRight className="text-lg" />
                                 </button>
+                                </Link>
                             </div>
 
                             <div className="w-full md:w-auto">
