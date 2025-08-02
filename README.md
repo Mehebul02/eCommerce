@@ -25,12 +25,6 @@ This project is deployed live at: [**E-Commerce Live Demo**](https://e-commerce-
 
 ---
 
-## 📷 Preview
-
-![E-Commerce Preview](https://e-commerce-cyan-one-25.vercel.app/preview-image.png)
-
----
-
 ## ⚙️ Installation & Setup
 
 ```bash
