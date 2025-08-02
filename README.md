@@ -35,7 +35,7 @@ This project is deployed live at: [**E-Commerce Live Demo**](https://e-commerce-
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/e-commerce.git
+git clone https://github.com/Mehebul02/eCommerce.git
 
 # Navigate to project directory
 cd e-commerce
