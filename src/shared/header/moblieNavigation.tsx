@@ -8,6 +8,7 @@ import SocialLinks from '../SocialLinks';
 import { logo } from '@/assets';
 import Image from 'next/image';
 import { navigation } from '@/constants';
+import HeaderIcons from './HeaderIcons';
 
 
 const MobileNavigation = () => {
@@ -61,6 +62,9 @@ const MobileNavigation = () => {
                         </div>
                         {/* social link  */}
                         <SocialLinks/>
+                       <div className="flex items-center gap-5 pt-5">
+                         <HeaderIcons/>
+                       </div>
                     </DialogPanel>
                 </div>
             </Dialog>
